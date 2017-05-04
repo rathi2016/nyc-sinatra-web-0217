@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Select Figure</title>
+  </head>
+  <body>
+    <% @figures.each do |figure| %>
+     <td align="center"><a href="/figures/<%= figure.id %>"><%= figure.name %></a>
+     <ul>
+        <%figure.titles.each do |title|%>
+        <li><%=title.name%></li>
+        <%end%>
+      </td>
+      </ul>
+      <% end %>
+      <a class="button" href="/">Go Home</a>
+  </body>
+</html>
